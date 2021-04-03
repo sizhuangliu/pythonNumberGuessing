@@ -12,7 +12,7 @@ class NumberCompare:
     def guess_num(self):
 
         if self.num == "g":
-            print('you are closing, the guess number is ' + str(self.randnum))
+            print('You are closing, the guess number is ' + str(self.randnum))
             return False
         elif self.num.isnumeric():
             if int(self.num) == self.randnum:
@@ -28,6 +28,8 @@ class NumberCompare:
             print("Invalid input, please type a number or 'G' if you want to give up")
             return True
 
+    __version__ = '0.2'
+
 
 number_to_guess = random.randint(1, 100)
 guess = input('Enter an integer between 1 to 100 : ')
@@ -38,3 +40,4 @@ while p.guess_num():
     p.num = input('Enter an integer between 1 to 100 : ')
 
 print(NumberCompare.__doc__)
+print('version', NumberCompare.__version__)
